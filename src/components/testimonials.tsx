@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import Image from 'next/image'
 
 export default function Testimonials() {
     return (
@@ -13,7 +14,7 @@ export default function Testimonials() {
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
                     <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
                         <CardHeader>
-                            <img className="h-6 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nike.svg" alt="Nike Logo" height="24" width="auto" />
+                            <Image className="h-6 w-auto dark:invert" src="https://html.tailus.io/blocks/customers/nike.svg" alt="Nike Logo" width={96} height={24} />
                         </CardHeader>
                         <CardContent>
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
@@ -36,7 +37,7 @@ export default function Testimonials() {
                     <Card className="md:col-span-2">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">The security and transparency of Nexus's blockchain platform give us peace of mind. We can track every transaction in real-time, and their smart contract features have automated our payment processes.</p>
+                                <p className="text-xl font-medium">The security and transparency of Nexus&apos;s blockchain platform give us peace of mind. We can track every transaction in real-time, and their smart contract features have automated our payment processes.</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">

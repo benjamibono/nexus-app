@@ -1,6 +1,6 @@
 'use client';
 import { ReactNode } from 'react';
-import { motion, Variants } from 'motion/react';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 
 export type PresetType =
@@ -119,14 +119,13 @@ function AnimatedGroup({
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
 
-  const MotionComponent = motion.create(as as keyof JSX.IntrinsicElements);
-
-  const MotionChild = motion.create(asChild as keyof JSX.IntrinsicElements);
+  const MotionComponent = motion(as);
+  const MotionChild = motion(asChild);
 
   return (
     <MotionComponent
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
       className={className}
     >
